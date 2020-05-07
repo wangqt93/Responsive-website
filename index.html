@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <link rel="stylesheet" href="css/1.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="top-left">
+                <span class="Tel">Tel : 010-6246-6684</span>
+                <span class="addr">地址：北京大兴区</span>
+            </div>
+            <div class="top-right">
+                <span class="login_in"><a href="">登陆</a></span>
+                <span class="login_up"><a href="">注册</a></span>    
+            </div>
+        </div>
+        <nav>
+            <a href=""><img src="image/logo.png" alt=""></a>
+            <ul class='list'>
+                <li><a href="">首页</a></li>
+                <li><a href="">全部课程</a></li>
+                <li><a href="">师资团队</a></li>
+                <li><a href="">相册</a></li>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">博客</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class='carouse'><!--轮播-->
+            <div class='conceal'>
+                <picture>
+                    <source srcset="image/banner1-1.jpg" media="(min-width:50em)">
+                    <source srcset="image/banner1-2.jpg" media="(min-width: 30em)">
+                    <img srcset="image/banner1-3.jpg">
+                </picture>
+            </div>
+            <div class="container">
+                <div class="item" style="z-index:2;">
+                    <picture>
+                        <source srcset="image/banner1-1.jpg" media="(min-width:50em)">
+                        <source srcset="image/banner1-2.jpg" media="(min-width: 30em)">
+                        <img srcset="image/banner1-3.jpg">
+                    </picture>
+                </div>
+                <div class='item' style="z-index:1;">
+                    <picture>
+                        <source srcset="image/banner2-1.jpg" media="(min-width:50em)">
+                        <source srcset="image/banner2-2.jpg" media="(min-width: 30em)">
+                        <img srcset="image/banner2-3.jpg">
+                    </picture>
+                </div>
+                <div class='item' style="z-index:0;">
+                    <picture>
+                        <source srcset="image/banner3-1.jpg" media="(min-width:50em)">
+                        <source srcset="image/banner3-2.jpg" media="(min-width: 30em)">
+                        <img srcset="image/banner3-3.jpg">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="course">  <!--课程介绍-->
+            <h2>热门课程</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="image/jquery.jpg" alt="">
+                    <p>jQuery</p>
+                    <p>Each-left</p>
+                </div>
+                <div class="item">
+                    <img src="image/jquery.jpg" alt="">
+                    <p>jQuery</p>
+                    <p>Each-left</p>
+                </div>
+                <div class="item">
+                    <img src="image/jquery.jpg" alt="">
+                    <p>jQuery</p>
+                    <p>Each-left</p>
+                </div>
+            </div>
+        </section>
+        <section class='about_us'> <!--关于我们-->
+            <h2>我们一直在努力</h2>
+            <h3>在这里你可以查看我们培训中心的教育资源统计</h3>
+            <div class="data">
+                <span>
+                    <h3>865,211</h3>
+                    <p>全球学员</p>
+                </span>
+                <span>
+                    <h3>865,211</h3>
+                    <p>全球学员</p>
+                </span>
+                <span>
+                    <h3>865,211</h3>
+                    <p>全球学员</p>
+                </span>
+                <span>
+                    <h3>865,211</h3>
+                    <p>全球学员</p>
+                </span>
+            </div>
+            <p id='contact'>联系我们</p>
+        </section> 
+    </main>
+    <footer>
+        <div class="content">
+            <span>Copyright © 2017 易驰教育 | Powered By 易驰教育</span>
+            <ul>
+                <li>首页</li>
+                <li>全部课程</li>
+                <li>关于我们</li>
+                <li>常见解答</li>
+                <li>联系我们</li>
+            </ul>
+        </div>
+
+    </footer>
+    <script src='js/main.js'></script>
+    <script src="js/picturefill.js"></script>
+</body>
+</html>

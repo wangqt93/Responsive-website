@@ -1,0 +1,268 @@
+/*样式初始化*/
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+html {
+ 
+	font-size: 62.5%   /*表示的是当前浏览器默认字体大小的62.5%*/
+}
+body {
+    width: 100%;
+	line-height: 1.5;
+	font-size: 1.2rem   /*body默认字体大小为12px*/
+}
+:: selection {
+	background: #b3d4fc;
+}
+a {
+    text-decoration: none;
+    color: #aaa;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*头部--top*/
+header {
+    width:100%;
+}
+header .top {
+
+    background: rgb(85,85,85);
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    line-height: 5em;
+}
+
+.top-left .Tel {
+    padding: 0 2em;
+    margin-right: 2em;  
+}
+.top-right .login_in {
+    cursor: pointer;
+}
+.top-right .login_up a  {
+    border-left: 1px solid #fff;
+    display: inline-block;
+    line-height: 1rem;    
+    padding: 0 1.5em;
+    margin-left: 1.5em;  
+    cursor: pointer;  
+}
+/*头部 nav*/
+ header nav {
+    background: #999;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+ }
+ header nav img {
+     width: 26rem;
+ }
+ .container .item picture {
+    overflow: hidden;
+}
+ header nav .list  {
+    display: flex;
+    
+ }
+ nav .list li a {
+    color: #fff;
+    padding: 1.6rem;
+ }
+/*主体-轮播*/
+main {
+    width: 100%;
+}
+main .carouse  {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index:1;
+}
+.carouse .container {
+    width:100%;
+    z-index: 5;
+}
+.carouse .conceal {
+    z-index : 1;
+}
+.carouse .conceal img {
+    width: 100%;
+    opacity: 0;
+}
+.carouse .container .item {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.carouse .container .item img{
+    width: 100%;
+    object-fit:cover;
+}
+
+.container .item:nth-child(1){
+
+    transition: all 0.4s;
+}
+.container .item:nth-child(2){
+  
+    transition: all 0.4s;
+}
+.container .item:nth-child(3){
+
+    transition: all 0.4s;
+}
+.container .item.active {
+     transform: translateX(-100%);
+}
+
+/* .carouse .container .item.active {
+    display: block;
+} */
+
+/*课程介绍*/
+.course h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+.course .items {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+.items p {
+    text-align: center;
+    font-size: 2rem;
+}
+/*关于我们*/
+.about_us {
+    width: 100%;
+    background: #555555;
+    border-bottom: 1px solid #ffffff;
+ 
+    
+}
+ 
+
+.about_us h2 {
+    font-size: 5rem;
+    text-align: center;
+    display: block;
+    padding: 6rem 0;
+    color: orange;
+}
+.about_us h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    display:block;
+    padding-bottom: 4rem;
+}
+.about_us .data {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.about_us .data h3 {
+    font-size: 3rem;
+    color: orange;
+}
+.about_us .data p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.about_us #contact {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+/*footer*/
+footer .content {
+    background: #555555;
+    display: flex;
+    justify-content:space-between;
+    padding: 1.5rem 1rem;
+    color: #fff;
+}
+.content ul {
+    display:flex;
+    width: 30%;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+/*响应式布局*/
+/*在screen 最大宽度为800px的时候*/
+@media only screen and (max-width:50em) {  
+    header nav  {
+        flex-direction: column;
+    }
+    .course .items {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about_us .data {
+        overflow: hidden;
+    }
+    .about_us .data :nth-child(4){
+        display: none;
+    }
+    footer ul :nth-child(3),:nth-child(5) {
+        display: none;
+    }
+    
+
+}
+/*在screen 最大宽度为480px的时候*/
+@media only screen and (max-width:30em) {
+    .top .top-left .addr {
+        display:none;
+    }
+    nav .list {
+        width: 100%;
+        justify-content: space-around;
+    }
+    nav .list li a {     /*缩小li的内边距*/
+        padding :0;
+        padding-left: 0.5rem;
+    }
+    .about_us h2 {
+        font-size: 3rem;
+    }
+    .about_us h3 {
+        font-size: 1.4rem;
+    }
+    .about_us .data :nth-child(3){
+        display: none;
+    }
+    footer .content span {
+        display: none;
+    }
+    footer .content {
+        justify-content: flex-end;
+    }
+    footer .content ul {
+        width: 50%;
+    }
+}
+
